@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+}
+
+#header{
+    display: grid;
+    grid-template-columns: 1fr auto; /* Crear dos columnas, una que ocupe todo el ancho disponible y otra para los enlaces */
+    align-items: center;
+    padding: 15px;
+    background-color: rgb(2, 2, 2);
+    color: white;
+    grid-column: 1/4;
+}
+
+#header h1 {
+  margin: 0;
+}
+
+#header a {
+  justify-self: end; /* Alinear el elemento "a" a la derecha de su celda */
+  color: white;
+  margin-left: 0px; /* Agregar un margen a la izquierda para separarlo del h1 */
+}
+
+#aside-left{
+    grid-column: 1 / 2;
+    padding: 15px;
+    background-color: rgba(144,94,65, 1);
+    color: white;
+}
+
+
+#aside-rigth{
+    grid-column: 3 / 4;
+    padding: 15px;
+    background-color: rgba(144,94,65, 1);
+    color: white;
+}
+
+
+#main{
+    grid-column: 2 / 3;
+    padding: 15px;
+    background-color: black;
+    color: white;
+}
+
+#footer{
+    grid-column: 1 / 4;
+    padding: 15px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.keyword{
+    font-size: 1.3em;
+    color: blue;
+    /* border: 5px dashed green; */
+}
+
+
+h1{
+    background-color: black;
+    color: red;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+  
+img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+ul {
+    text-align: center;
+    margin-bottom: 20px;
+    list-style: none;
+}
+  
+li {
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #aside-left, #aside-rigth {
+    display: none;
+  }
+}
+
+
+nav {
+	background-color: black;
+	display: flex;
+	justify-content: center;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	margin: 0 0.5rem;
+}
+
+nav li a {
+	color: white;
+	text-decoration: none;
+	padding: 0.5rem;
+}
+
+nav li a:hover {
+	background-color: black;
+}
+
+.personaje-link {
+    display: inline-block;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.personaje-link:hover {
+    background-color: black;
+    color: white;
+}
+
+.personaje-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+  
+.personaje-container img {
+    margin: 0 auto;
+}

@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+}
+
+#header{
+    display: grid;
+    grid-template-columns: 1fr auto; /* Crear dos columnas, una que ocupe todo el ancho disponible y otra para los enlaces */
+    align-items: center;
+    padding: 15px;
+    background-color: rgb(2, 2, 2);
+    color: white;
+    grid-column: 1/4;
+}
+
+
+#aside-left{
+    grid-column: 1 / 2;
+    padding: 15px;
+    background-color: rgba(144,94,65, 1);
+    color: white;
+}
+
+
+#aside-rigth{
+    grid-column: 3 / 4;
+    padding: 15px;
+    background-color: rgba(144,94,65, 1);
+    color: white;
+}
+
+
+#main{
+    grid-column: 2 / 3;
+    padding: 15px;
+    background-color: gold;
+    color: white;
+}
+
+#footer{
+    grid-column: 1 / 4;
+    padding: 15px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.keyword{
+    font-size: 1.3em;
+    color: blue;
+    /* border: 5px dashed green; */
+}
+
+
+h1{
+    background-color: black;
+    color: red;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.contenedor_De_historia{
+    float: left;
+    width: 50%; /*cambiar el width a 100%*/
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.historia{
+    border: 5px;
+    background-color: black;
+    color: white;
+    font-size: 1.6rem;
+    text-align: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow-y: auto;
+}
+
+
+.videos{
+    width: 50%; /*cambiar el width a 100%*/
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*margin-top: 20px;*/
+}
+
+.videos video {
+    max-height: 50vh;
+}
+
+.contenedor_total{
+    background-color: black;
+    border-radius: 15px;
+    overflow: auto; /* Para ocultar cualquier contenido que se salga del contenedor se coloca hiden*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  #aside-left, #aside-rigth {
+    display: none;
+  }
+  .contenedor_De_historia{
+     width: 100%;
+    }
+.videos{
+     width: 100%;
+    }
+}
+
+nav {
+	background-color: black;
+	display: flex;
+	justify-content: center;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	margin: 0 0.5rem;
+}
+
+nav li a {
+	color: white;
+	text-decoration: none;
+	padding: 0.5rem;
+}
+
+nav li a:hover {
+	background-color: black;
+}

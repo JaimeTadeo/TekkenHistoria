@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+}
+
+#header{
+    padding: 15px;
+    background-color: black;
+    color: white;
+    grid-column: 1/4;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+	font-size: 3rem;
+    color: red;
+	margin-bottom: 0.5rem;
+}
+
+h2 {
+	font-size: 2rem;
+    color: gold;
+	margin-bottom: 1rem;
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	color: blue;
+	background-color: black;
+	padding: 0.5rem 1rem;
+	border-radius: 0.25rem;
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: black;
+	color: red;
+}
+
+
+#aside-left{
+    grid-column: 1 / 2;
+    padding: 15px;
+    background-color: rgba(144,94,65, 1);
+    color: white;
+}
+
+#aside-rigth{
+    grid-column: 3 / 4;
+    padding: 15px;
+    background-color: rgba(144,94,65, 1);
+    color: white;
+}
+
+#main{
+    grid-column: 2 / 3;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    max-width: 800px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+  
+
+
+#footer{
+    grid-column: 1 / 4;
+    padding: 15px;
+    background-color: black;
+    color: white;
+}
+
+.keyword{
+    font-size: 1.3em;
+    color: blue;
+    /* border: 5px dashed green; */
+}
+
+nav {
+	background-color: black;
+	display: flex;
+	justify-content: center;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	margin: 0 0.5rem;
+}
+
+nav li a {
+	color: white;
+	text-decoration: none;
+	padding: 0.5rem;
+}
+
+nav li a:hover {
+	background-color: black;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+	#aside-left, #aside-rigth {
+		display: none;
+	}
+}
